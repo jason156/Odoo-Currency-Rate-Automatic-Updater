@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:
+-->
+<openerp>
+    <data>
+    
+        <record forcecreate="True" id="ir_cron_expiry_notification_alert_expiry_dates"
+            model="ir.cron">
+            <field name="name">Currency Rate Fetcher</field>
+            <field eval="True" name="active" />
+            <field name="user_id" ref="base.user_root" />
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field eval="False" name="doall" />
+            <field eval="'res.currency'" name="model" />
+            <field eval="'do_run_scheduler'" name="function" />
+            <field eval="'(False,)'" name="args" />
+        </record>
+   
+   		
+   
+    </data>
+</openerp>
